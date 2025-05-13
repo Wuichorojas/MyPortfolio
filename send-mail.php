@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $to = "luisrojas.mtz271@gmail.com"; // ← Reemplaza con tu correo real
+    $to = "luisrojas.mtz271@gmail.com";
     $name = htmlspecialchars($_POST["name"]);
     $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
     $message = htmlspecialchars($_POST["message"]);
