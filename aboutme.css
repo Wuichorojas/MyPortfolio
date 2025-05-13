@@ -1,11 +1,9 @@
-/* Sección About con fondo distinto */
 .about-section {
     background: linear-gradient(135deg, #0a0f1a, #112e4f, #1d4d72);
     padding: 5rem 2rem;
     text-align: center;
 }
 
-/* Título centrado con brillo */
 .section-title {
     font-size: 2.8rem;
     color: #ffffff;
@@ -13,7 +11,6 @@
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
-/* Contenedor de tarjetas */
 .about-cards {
     display: flex;
     justify-content: center;
@@ -23,7 +20,6 @@
     margin: 0 auto;
 }
 
-/* Tarjetas giratorias */
 .about-card {
     perspective: 1000px;
     width: 300px;
@@ -85,7 +81,6 @@
     line-height: 1.6;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .about-cards {
         flex-direction: column;
