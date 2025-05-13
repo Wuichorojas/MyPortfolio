@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-/* Fondo animado de meteoritos */
 #meteorCanvas {
     position: fixed;
     top: 0;
@@ -15,7 +14,6 @@
     background-color: #0a0f1a;
 }
 
-/* Asegurarse de que los elementos sean transparentes para ver el fondo */
 body,
 .hero {
     background: transparent;
@@ -206,7 +204,6 @@ body {
     margin-bottom: 1rem;
 }
 
-/* Foto + animación */
 .profile-photo {
     width: 200px;
     height: 200px;
@@ -231,12 +228,10 @@ body {
     width: 100%;
     max-width: 400px;
     height: 10rem;
-    /* fija una altura */
     overflow: hidden;
     position: relative;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .hero-container {
         flex-direction: column;
@@ -261,7 +256,6 @@ body {
 }
 
 
-/* Responsive hero text */
 @media (max-width: 768px) {
     .title {
         font-size: 2rem;
