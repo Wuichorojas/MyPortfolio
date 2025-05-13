@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo animado de meteoritos */
+#meteorCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #0a0f1a;
+}
+
+/* Asegurarse de que los elementos sean transparentes para ver el fondo */
+body,
+.hero {
+    background: transparent;
+}
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+    width: 100%;
+    background-color: #0a0f1a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.logo {
+    color: #4ea8de;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-center .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #4ea8de;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    transition: all 0.3s;
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100%;
+    background-color: #101d2c;
+    transition: right 0.4s ease;
+    padding-top: 80px;
+    z-index: 999;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-left: 2rem;
+}
+
+.mobile-menu a {
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.mobile-menu a:hover {
+    color: #4ea8de;
+}
+
+@media (max-width: 768px) {
+    .nav-center {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .mobile-menu.open {
+        right: 0;
+    }
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 6rem 2rem 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content {
+    max-width: 700px;
+    color: #ffffff;
+}
+
+.code-line {
+    color: #4ea8de;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #cccccc;
+}
+
+.btn-cv {
+    display: inline-block;
+    background-color: #4ea8de;
+    color: #0a0f1a;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 15px;
+    transition: background-color 0.3s;
+}
+
+.btn-letters {
+    display: inline-block;
+    background-color: #4ea8de;
+    color: #0a0f1a;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-cv:hover {
+    background-color: #3a90c6;
+}
+
+.hero-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem;
+}
+
+.hero-left,
+.hero-right {
+    flex: 1 1 45%;
+}
+
+.hero-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-box {
+    margin-bottom: 1rem;
+}
+
+/* Foto + animación */
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #4ea8de;
+    display: block;
+    margin: 0 auto 1rem;
+    margin-left: 10rem;
+}
+
+.typing-container {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    color: #4ea8de;
+    white-space: pre-wrap;
+    text-align: left;
+    margin-left: 10rem;
+}
+
+.typing-box {
+    width: 100%;
+    max-width: 400px;
+    height: 10rem;
+    /* fija una altura */
+    overflow: hidden;
+    position: relative;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-left,
+    .hero-right {
+        width: 100%;
+        flex: 1 1 100%;
+    }
+
+    .profile-photo {
+        margin-top: 2rem;
+        margin-left: -10px;
+    }
+
+    .typing-container {
+        text-align: center;
+        margin-left: -10px;
+    }
+}
+
+
+/* Responsive hero text */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+}
